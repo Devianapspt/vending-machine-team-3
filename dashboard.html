@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="styles.css">
+	<title>Team 3 Semarang</title>
+</head>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx'></i>
+			<span class="text">Vending Machine</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<a href="#" class="profile">
+				<img src="T3.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<span class="text">
+				<h3>Sales By Category</h3>
+			</span>
+			
+			<ul class="box-info">
+				<li>
+					<span class="text">
+						<h3>5.293</h3>
+						<p>Food</p>
+					</span>
+				</li>
+				<li>
+					<span class="text">
+						<h3>657</h3>
+						<p>Water</p>
+					</span>
+				</li>
+				<li>
+					<span class="text">
+						<h3>2.377</h3>
+						<p>Carbonated</p>
+					</span>
+				</li>
+				<li>
+					<span class="text">
+						<h3>1.023</h3>
+						<p>Non Carbonated</p>
+					</span>
+				</li>
+			</ul>
+			
+			<ul class="box">
+				<li style="display: flex; flex-direction: column;">
+                	<h3>Average Basket Size by Location</h3>
+					<div style="width:100%;height:100%">
+						<canvas id="barchart" ></canvas>
+					</div>
+				</li>
+				
+				<li style="display: flex; flex-direction: column;">
+					<h3>Average Basket Size by Location</h3>
+					<div style="width: 100%; height:100%">
+						<canvas id="barchart2" ></canvas>
+					</div>
+				</li>
+            </ul>
+			
+			<ul class="box">
+				<li style="display: flex; flex-direction: column;">
+					<h3>Type by Location</h3>
+					<div style="width: 100%; height: 100%">
+						<canvas id="chart3"></canvas>
+					</div>
+				</li>
+				
+				<li style="display: flex; flex-direction: column;">
+					<h3>Sales by Month</h3>
+					<div style="width: 100%; height: 100%">
+						<canvas id="chart4"></canvas>
+					</div>
+				</li>
+            </ul>
+
+			<ul class="box">
+				<li style="display: flex; flex-direction: column;">
+                <h3>Sales Category by Location</h3>
+				<div style="width: 100%; height: 100%">
+					<canvas id="chart5" ></canvas>
+				</div>
+				</li>
+				
+				<li style="display: flex; flex-direction: column;">
+				<h3>Sales in BSQ Mall</h3>
+				<div style="width:50%">
+					<canvas id="chart6" ></canvas>
+				</div>
+				</li>
+            </ul>			
+            </div>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Top Product By Sales</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Produk</th>
+								<th>Location</th>
+								<th>Sold</th>
+							</tr>
+						</thead>
+						<tbody id="valData">
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Top Product By AVG</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Product</th>
+								<th>Category</th>
+								<th>Sold</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td>
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td>5</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chart2.js"></script>
+    <script src="chart3.js"></script>
+    <script src="chart4.js"></script>
+    <script src="chart5.js"></script>
+    <script src="chart6.js"></script>
+
+	<script>
+		
+	</script>
+
+</body>
+</html>
